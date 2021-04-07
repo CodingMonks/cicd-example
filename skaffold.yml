@@ -1,0 +1,12 @@
+apiVersion: scaffold/v1
+kind: Config
+build:
+  artifacts:
+  - image: welcome-application
+    jib: {} // Not needed if we want to go for custom docker
+    local: {}
+
+deploy:
+  kubectl:
+    manifests:
+      - k8s-* // scans kubernetes deployment files which starts with k8s**

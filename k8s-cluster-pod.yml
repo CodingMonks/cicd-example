@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nodeapp
+  name: welcome-application
   labels:
-    app: nodeapp
+    app: welcome-application
 spec:
   containers:
-    - name: nodeapp
+    - name: welcome-application
       image: codingmonks/welcome-application:v1
       ports:
         - containerPort: 8080

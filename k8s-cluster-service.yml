@@ -1,0 +1,13 @@
+apiImage:
+kind : Service
+metadata :
+  name: welcome-application
+spec:
+  ports:
+    -port: 8090
+    targetPort : 8090
+    protocol : TCP
+  selector:
+    app: welcome-application
+  type: LoadBalancer
+  // Routing, DNS and other things can be added
