@@ -1,20 +1,19 @@
 apiVersion: apps/v1
-#apiImage:
-kind : Deployment
-metadata :
+kind: Deployment
+metadata:
   name: welcome-application
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: welcome-application
-    template:
-      metadata:
-        labels:
-          app: welcome-application
-      spec:
-        containers:
-          - name: welcome-application
-            image: codingmonks/welcome-application:v1 # match with image in skaffold.xml
-            ports:
-              -container: 8090
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: welcome-application
+    spec:
+      containers:
+        - name: welcome-application
+          image: "codingmonks/welcome-application:v1" # match with image in skaffold.xml
+          ports:
+            - containerPort: 8090
