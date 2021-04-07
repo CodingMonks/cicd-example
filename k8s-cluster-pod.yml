@@ -1,4 +1,4 @@
-apiVersion: v2.4
+apiVersion: apps/v1
 kind: Pod
 metadata:
   name: welcome-application
